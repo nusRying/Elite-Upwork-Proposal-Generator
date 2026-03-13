@@ -1,0 +1,18 @@
+# Project: Automated Shopify to Google Sheets Sync
+
+## Overview
+Developed a custom automation tool for a small e-commerce owner to sync Shopify orders with Google Sheets in real-time.
+
+## Tech Stack
+- Python
+- Shopify API (Admin API)
+- Google Sheets API
+- n8n for workflow orchestration
+
+## Key Results
+- Reduced manual data entry time by 10 hours per week.
+- Handled over 12,000 orders per day without failures.
+- Implemented error handling for webhook timeouts.
+
+## Personal Note
+The client was extremely satisfied with the reliability of the system, especially during the Black Friday peak.

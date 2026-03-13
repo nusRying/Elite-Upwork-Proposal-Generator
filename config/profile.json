@@ -1,0 +1,16 @@
+{
+  "name": "Umair",
+  "title": "Elite AI & Automation Engineer",
+  "expertise": [
+    "Python",
+    "LangGraph",
+    "Ollama",
+    "FastAPI",
+    "3D Modeling (SolidWorks, nTopology)",
+    "Shopify Automation"
+  ],
+  "hourly_rate": "$50/hr",
+  "typical_turnaround": "3-5 days",
+  "timezone": "PKT (UTC+5)",
+  "value_proposition": "I bridge the gap between complex engineering and automated efficiency, ensuring precise deliverables and scalable systems."
+}

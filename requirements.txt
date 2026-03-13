@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+requests
+pydantic
+pymupdf
+langgraph
+langchain
+langchain-community
+langchain-ollama
+sentence-transformers

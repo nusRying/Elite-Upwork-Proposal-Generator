@@ -1,0 +1,6 @@
+Project: AI-Powered Mechanical Generative Design
+Tech: nTopology, Python, SolidWorks, AI (LLM)
+Outcome: Automated the creation of heat sinks for high-performance computing. Reduced design cycle from 3 days to 4 hours. Used AI to optimize topology based on thermal simulation results.
+Client Review: "Incredible work. He didn't just design it, he automated the entire logical flow."
+Year: 2025
+Success Rate: 100%

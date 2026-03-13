@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --accent-glow: radial-gradient(circle at top left, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                 radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.08) 0%, transparent 50%);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #060608;
+  background-image: var(--accent-glow);
+  min-height: 100vh;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.6);
+}
+
+.glow-text {
+  text-shadow: 0 0 25px rgba(99, 102, 241, 0.3);
+}
+
+.text-glow {
+  filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5));
+}
+
+.progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+}

@@ -1,0 +1,30 @@
+I need an agentic AI system built on Google Colab that automates my Upwork proposal writing process end-to-end using the Claude API (Sonnet 4.6).
+
+How It Should Work:
+
+I upload/paste an Upwork job post
+Agent extracts: tech stack, problem statement, niche, and key requirements
+
+Based on extracted tech stack and niche, I search my portfolio and provide relevant project descriptions
+
+I feed them back into the system
+Agent generates a full, personalized proposal
+Directly addresses the client's problem statement with my relevant experience as a solution
+Ready to copy-paste and send
+
+Requirements:
+
+Claude Sonnet API (claude-sonnet-4-6)
+Multi-step agentic flow (not just a single prompt)
+API key input - no hardcoding
+Well-commented code
+
+Deliverables:
+Complete AI System
+Short usage guide
+
+Ideal Freelancer:
+
+Experience with LLM APIs (Claude, OpenAI, or similar) 
+Has built agentic or multi-step AI pipelines before
+Python proficient

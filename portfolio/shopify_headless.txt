@@ -1,0 +1,6 @@
+Project: Custom Shopify Headless Storefront
+Tech: Shopify, Hydrogen, React, Remix, Tailwind
+Outcome: Built a high-performance headless store for a luxury watch brand. 98+ PageSpeed score. Integrated custom checkout with personalized engravings.
+Client Review: "Best Shopify developer on the platform. Period."
+Year: 2024
+Success Rate: 100%
