@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Elite Upwork Proposal Generator",
+  "version": "1.0",
+  "description": "One-click proposal generation for Upwork jobs.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.upwork.com/*",
+    "http://localhost:8000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.upwork.com/jobs/*", "https://www.upwork.com/ab/jobs/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

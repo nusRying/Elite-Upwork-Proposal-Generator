@@ -1,7 +1,8 @@
-import json
 from agents.pre_writing import JobAnalyzer, ClientAnalyzer
 from agents.writing_suite import Strategist, HookGenerator, Writer, QASolver, Critic
 from database.vector_store import RankingEngine
+from utils.knowledge_vault import KnowledgeVault
+from utils.feedback_loop import FeedbackLoop
 
 class EliteProposalWorkflow:
     def __init__(self):
@@ -13,6 +14,8 @@ class EliteProposalWorkflow:
         self.qa_solver = QASolver()
         self.critic = Critic()
         self.ranking_engine = RankingEngine()
+        self.knowledge_vault = KnowledgeVault()
+        self.feedback_loop = FeedbackLoop()
 
     def run(self, job_description, client_history="", screening_questions=None):
         print("--- Starting Elite Proposal Workflow ---")
@@ -27,11 +30,24 @@ class EliteProposalWorkflow:
         strategy = self.strategist.create_strategy(job_analysis, client_analysis)
         
         # 3. Knowledge Retrieval
-        print("[3/6] Retrieving Relevant Portfolio Projects...")
+        print("[3/6] Retrieving Relevant Portfolio & Knowledge...")
         relevant_projects = self.ranking_engine.search_and_rank(
             job_description, 
             required_tech=job_analysis.get('tech_stack', [])
         )
+        
+        # New V2: Knowledge Vault Retrieval
+        knowledge_items = self.knowledge_vault.get_all_knowledge()
+        # Filter knowledge items that match tech stack (simple keyword match for now)
+        relevant_knowledge = []
+        for item in knowledge_items:
+            for tech in job_analysis.get('tech_stack', []):
+                if tech.lower() in item['snippet'].lower():
+                    relevant_knowledge.append(item)
+                    break
+        
+        # New V2: Feedback Loop (Few-shot learning)
+        winning_examples = self.feedback_loop.get_winning_examples(limit=2)
         
         # 4. Writing Phase
         print("[4/6] Generating Hooks & Draft...")
@@ -43,6 +59,8 @@ class EliteProposalWorkflow:
             "strategy": strategy,
             "hooks": hooks,
             "relevant_projects": relevant_projects,
+            "relevant_knowledge": relevant_knowledge,
+            "winning_examples": winning_examples,
             "job_description": job_description
         }
         

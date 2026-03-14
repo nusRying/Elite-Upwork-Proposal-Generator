@@ -38,23 +38,34 @@ The **Elite Upwork Proposal Generator** is a sophisticated, autonomous agent sys
 ## 🚀 Quick Start
 
 ### 1. Prerequisites
-- [Ollama](https://ollama.ai/) installed and running.
-- Python 3.12+ and Node.js installed.
+- **Ollama**: [Download & Install](https://ollama.ai/)
+- **Hardware**: Minimum 4GB VRAM (GPU) is recommended for smooth local inference.
+- **Environment**: Python 3.12+ and Node.js (Latest LTS).
 
-### 2. Installation
+### 2. Model Installation
+This generator is optimized for 4GB VRAM GPUs (like RTX 3050/4050). Run these commands in your terminal to pull the required model suite:
+
+```bash
+ollama pull llama3.2:3b        # Main writing and strategy
+ollama pull phi3:mini          # Fast analysis and screening
+ollama pull nomic-embed-text   # Portfolio semantic search
+```
+
+### 3. Application Setup
 ```bash
 # Clone the repository
 git clone https://github.com/your-username/Elite-Upwork-Proposal-Generator.git
 cd Elite-Upwork-Proposal-Generator
 
-# Setup Python environment
+# Setup Python Backend
 python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+venv\Scripts\activate  # On Windows
 pip install -r requirements.txt
 
-# Setup Dashboard
+# Setup React Dashboard
 cd dashboard
 npm install
+cd ..
 ```
 
 ### 3. Usage
