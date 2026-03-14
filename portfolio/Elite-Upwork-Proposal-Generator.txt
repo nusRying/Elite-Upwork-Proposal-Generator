@@ -1,0 +1,8 @@
+Project: ≡ƒÜÇ Elite Upwork Proposal Generator
+Link: https://github.com/nusRying/Elite-Upwork-Proposal-Generator
+Tech: Python, React, AI, LangGraph, Ollama, FastAPI, TypeScript, Node.js, Tailwind CSS
+Skills: Python, React, AI, LangGraph, Ollama, FastAPI, TypeScript, Node.js, Tailwind CSS
+Outcome: --
+Source: GitHub Repository (Elite-Upwork-Proposal-Generator)
+Year: 2024
+Status: Completed

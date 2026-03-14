@@ -1,0 +1,8 @@
+Project: Automatic Brain Tumor Segmentation
+Link: https://github.com/nusRying/brain_segmentation
+Tech: AI, Keras, AWS
+Skills: AI, Keras, AWS
+Outcome: --
+Source: GitHub Repository (brain_segmentation)
+Year: 2024
+Status: Completed

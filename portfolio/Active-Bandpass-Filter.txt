@@ -1,0 +1,8 @@
+Project: Active Bandpass Filter for Signal Conditioning
+Link: --
+Tech: Op-amps, Multisim/PSpice, Analog Electronics
+Skills: Circuit Design, Electrical Network Analysis, Signal Filtering
+Outcome: Engineered an op-amp-based bandpass filter to amplify specific frequency ranges for signal processing.
+Source: NUST CEME Coursework
+Year: 2023
+Status: Completed

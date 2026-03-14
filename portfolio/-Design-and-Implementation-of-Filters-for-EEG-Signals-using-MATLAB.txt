@@ -1,0 +1,8 @@
+Project: -Design-and-Implementation-of-Filters-for-EEG-Signals-using-MATLAB
+Link: https://github.com/nusRying/-Design-and-Implementation-of-Filters-for-EEG-Signals-using-MATLAB
+Tech: MATLAB
+Skills: MATLAB
+Outcome: --
+Source: GitHub Repository (-Design-and-Implementation-of-Filters-for-EEG-Signals-using-MATLAB)
+Year: 2024
+Status: Completed

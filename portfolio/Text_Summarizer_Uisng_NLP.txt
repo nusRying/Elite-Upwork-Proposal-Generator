@@ -1,0 +1,8 @@
+Project: Text_Summarizer_Uisng_NLP
+Link: https://github.com/nusRying/Text_Summarizer_Uisng_NLP
+Tech: General Engineering
+Skills: 
+Outcome: --
+Source: GitHub Repository (Text_Summarizer_Uisng_NLP)
+Year: 2024
+Status: Completed

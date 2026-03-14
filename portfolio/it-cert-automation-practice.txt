@@ -1,0 +1,8 @@
+Project: Google IT Automation with Python Professional Certificate - Practice files
+Link: https://github.com/nusRying/it-cert-automation-practice
+Tech: Python, AI
+Skills: Python, AI
+Outcome: --
+Source: GitHub Repository (it-cert-automation-practice)
+Year: 2024
+Status: Completed

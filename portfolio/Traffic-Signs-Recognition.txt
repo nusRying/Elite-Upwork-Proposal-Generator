@@ -1,0 +1,8 @@
+Project: ≡ƒÜª Traffic Sign Intelligence
+Link: https://github.com/nusRying/Traffic-Signs-Recognition
+Tech: Python, AI, TensorFlow, Keras
+Skills: Python, AI, TensorFlow, Keras
+Outcome: --
+Source: GitHub Repository (Traffic-Signs-Recognition)
+Year: 2024
+Status: Completed

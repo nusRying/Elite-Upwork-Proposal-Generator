@@ -1,0 +1,8 @@
+Project: LCS ExSTraCS Experiments
+Link: https://github.com/nusRying/ExTRaCS-Image-Classification
+Tech: Python, AI, OpenCV, Scikit-Learn
+Skills: Python, AI, OpenCV, Scikit-Learn
+Outcome: --
+Source: GitHub Repository (ExTRaCS-Image-Classification)
+Year: 2024
+Status: Completed

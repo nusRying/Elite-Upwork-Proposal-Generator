@@ -1,0 +1,8 @@
+Project: Standalone Bundle: Hybrid Optimized v2 (Safety)
+Link: https://github.com/nusRying/deep-features-hybrid-v2-safety-standalone
+Tech: Python, AI
+Skills: Python, AI
+Outcome: --
+Source: GitHub Repository (deep-features-hybrid-v2-safety-standalone)
+Year: 2024
+Status: Completed

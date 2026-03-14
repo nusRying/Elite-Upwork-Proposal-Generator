@@ -1,0 +1,8 @@
+Project: Crossword Puzzle Game in C++
+Link: https://github.com/nusRying/CrossWord-Puzzle-Using-C-
+Tech: AI, C++
+Skills: AI, C++
+Outcome: --
+Source: GitHub Repository (CrossWord-Puzzle-Using-C-)
+Year: 2024
+Status: Completed

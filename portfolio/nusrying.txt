@@ -1,0 +1,8 @@
+Project: ≡ƒºá About Me
+Link: https://github.com/nusRying/nusrying
+Tech: Python, React, AI, TensorFlow, PyTorch, C++, OpenCV, Scikit-Learn, ESP32, MATLAB, Docker
+Skills: Python, React, AI, TensorFlow, PyTorch, C++, OpenCV, Scikit-Learn, ESP32, MATLAB, Docker
+Outcome: -- <!-- ===================================================== --> <!-- HEADER SECTION -->
+Source: GitHub Repository (nusrying)
+Year: 2024
+Status: Completed

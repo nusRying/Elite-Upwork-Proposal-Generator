@@ -1,0 +1,8 @@
+Project: Sentiment Analysis on Sentiment140 Dataset
+Link: https://github.com/nusRying/Sentiment140-Sentiment-Analysis
+Tech: Python, AI, Scikit-Learn
+Skills: Python, AI, Scikit-Learn
+Outcome: --
+Source: GitHub Repository (Sentiment140-Sentiment-Analysis)
+Year: 2024
+Status: Completed

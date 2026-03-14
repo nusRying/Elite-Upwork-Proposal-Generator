@@ -1,0 +1,8 @@
+Project: Ml_Project
+Link: https://github.com/nusRying/Ml_Project
+Tech: General Engineering
+Skills: 
+Outcome: --
+Source: GitHub Repository (Ml_Project)
+Year: 2024
+Status: Completed

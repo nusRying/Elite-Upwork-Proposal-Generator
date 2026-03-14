@@ -1,0 +1,8 @@
+Project: AI Driven Repurposing Engine
+Link: https://github.com/nusRying/AI-Driven-Repurposing-Engine
+Tech: Python, React, AI, FastAPI, Next.js, PostgreSQL, Node.js, Tailwind CSS, Docker
+Skills: Python, React, AI, FastAPI, Next.js, PostgreSQL, Node.js, Tailwind CSS, Docker
+Outcome: --
+Source: GitHub Repository (AI-Driven-Repurposing-Engine)
+Year: 2024
+Status: Completed

@@ -5,12 +5,16 @@ class Strategist(BaseAgent):
     def __init__(self):
         super().__init__("llama3.2:3b") # Reasoning on 3B-instruct fits perfectly in VRAM
 
-    def create_strategy(self, job_analysis, client_analysis):
+    def create_strategy(self, job_analysis, client_analysis, job_type="project"):
         prompt = f"""
         Job Analysis: {job_analysis}
         Client Analysis: {client_analysis}
+        Job Type: {job_type}
 
-        Based on the above, create a proposal strategy in JSON format:
+        Based on the above, create a proposal strategy in JSON format.
+        CRITICAL: If Job Type is 'role', focus on long-term reliability, team fit, and broad expertise.
+        If Job Type is 'project', focus on the specific solution, methodology, and immediate milestones.
+
         {{
             "hook_style": "Pain-Point / Insight / Result-First",
             "priority_projects": ["Titles and why these are relevant"],
@@ -46,11 +50,18 @@ class Writer(BaseAgent):
         super().__init__("llama3.2:3b")
 
     def write_draft(self, state):
+        job_type = state.get('job_type', 'project')
         prompt = f"""
         State: {json.dumps(state)}
         System Knowledge (Relevant Projects): {state.get('relevant_projects', [])}
 
-        Write a full Upwork proposal based on the strategy and hook provided.
+        Write a full Upwork proposal. 
+        Job Type Context: {job_type}
+        
+        ADAPTATION RULES:
+        1. If 'role': Start by establishing rapport and interest in the company/role. Position as a long-term partner.
+        2. If 'project': Start by addressing the problem directly. Position as the immediate solution provider.
+
         Format in JSON:
         {{
             "draft": "Full proposal text",

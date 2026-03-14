@@ -1,0 +1,8 @@
+Project: Bio-feedback Integrated Wearable for Hand Tremor Reduction
+Link: --
+Tech: Python, Reinforcement Learning, PID Control, STM32, Gyros
+Skills: Embedded AI, Machine Learning, Firmware Development, Control Systems
+Outcome: Designed a wearable device integrating gyroscopic stabilization and RL for personalized tremor suppression.
+Source: Final Year Project (National University of Sciences and Technology - NUST)
+Year: 2024-2025
+Status: Completed

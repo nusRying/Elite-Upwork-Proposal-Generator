@@ -1,0 +1,8 @@
+Project: MITACS Globalink Research Internship - Haptic Motor Control
+Link: --
+Tech: C++, STM32, USB 3.0, ADC/DAC, MATLAB, Altium Designer
+Skills: PCB Design, Embedded Systems, Real-time Control, Signal Processing
+Outcome: Developed a high-speed motor controller (1kHz sampling) ensuring stable haptic interaction in virtual environments.
+Source: Professional Experience (MITACS Canada / Toronto Metropolitan University)
+Year: 2024
+Status: Completed

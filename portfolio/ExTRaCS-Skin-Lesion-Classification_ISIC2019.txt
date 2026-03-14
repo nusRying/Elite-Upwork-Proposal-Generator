@@ -1,0 +1,8 @@
+Project: ≡ƒö¼ Melanoma Detection using ExSTraCS
+Link: https://github.com/nusRying/ExTRaCS-Skin-Lesion-Classification_ISIC2019
+Tech: Python, AI, OpenCV, Scikit-Learn
+Skills: Python, AI, OpenCV, Scikit-Learn
+Outcome: Achieved 72.4% balanced accuracy on external validation demonstrating domain generalization.
+Source: Research Project (GitHub: ExTRaCS-Skin-Lesion-Classification_ISIC2019)
+Year: 2024
+Status: In Progress

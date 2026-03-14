@@ -1,0 +1,8 @@
+Project: Sign Language Recognition Using Image Processing and Machine Learning
+Link: https://github.com/nusRying/Sign-Language-Recognition-Using-Image-Processing-and-Machine-Learning
+Tech: Python, AI, TensorFlow, PyTorch
+Skills: Python, AI, TensorFlow, PyTorch
+Outcome: --
+Source: GitHub Repository (Sign-Language-Recognition-Using-Image-Processing-and-Machine-Learning)
+Year: 2024
+Status: Completed

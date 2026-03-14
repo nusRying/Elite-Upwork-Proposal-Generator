@@ -1,0 +1,8 @@
+Project: ThrowSense Elite ΓÇö Advanced Sports Biomechanics Suite ≡ƒÅå≡ƒº¼Γ£¿≡ƒÜÇ
+Link: https://github.com/nusRying/qb-biomech-suite
+Tech: Python, React, AI, FastAPI, Next.js, OpenCV, PostgreSQL, Tailwind CSS, Docker
+Skills: Python, React, AI, FastAPI, Next.js, OpenCV, PostgreSQL, Tailwind CSS, Docker
+Outcome: --
+Source: GitHub Repository (qb-biomech-suite)
+Year: 2024
+Status: Completed

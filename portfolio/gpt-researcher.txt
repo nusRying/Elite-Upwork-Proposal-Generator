@@ -1,0 +1,8 @@
+Project: ≡ƒöÄ GPT Researcher
+Link: https://github.com/nusRying/gpt-researcher
+Tech: AI, FastAPI, AWS
+Skills: AI, FastAPI, AWS
+Outcome: --
+Source: GitHub Repository (gpt-researcher)
+Year: 2024
+Status: Completed

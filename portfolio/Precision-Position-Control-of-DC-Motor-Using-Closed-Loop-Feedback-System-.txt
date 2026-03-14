@@ -1,0 +1,8 @@
+Project: Precision-Position-Control-of-DC-Motor-Using-Closed-Loop-Feedback-System-
+Link: https://github.com/nusRying/Precision-Position-Control-of-DC-Motor-Using-Closed-Loop-Feedback-System-
+Tech: MATLAB
+Skills: MATLAB
+Outcome: --
+Source: GitHub Repository (Precision-Position-Control-of-DC-Motor-Using-Closed-Loop-Feedback-System-)
+Year: 2024
+Status: Completed

@@ -1,4 +1,5 @@
 import os
+import re
 import fitz  # PyMuPDF
 from database.vector_store import RankingEngine
 
@@ -29,7 +30,7 @@ def ingest_portfolio():
 
     engine = RankingEngine()
     
-    files = [f for f in os.listdir(PORTFOLIO_DIR) if f.endswith(('.pdf', '.txt'))]
+    files = [f for f in os.listdir(PORTFOLIO_DIR) if f.endswith(('.pdf', '.txt', '.md'))]
     
     for filename in files:
         file_path = os.path.join(PORTFOLIO_DIR, filename)
@@ -43,15 +44,22 @@ def ingest_portfolio():
                 
         chunks = simple_text_splitter(content)
         
+        # Parse fields from the structured text
+        repo_link = ""
+        skills = []
+        link_match = re.search(r'Link: (https?://[^\n]+)', content)
+        if link_match:
+            repo_link = link_match.group(1)
+            
+        skills_match = re.search(r'Skills: ([^\n]+)', content)
+        if skills_match:
+            skills = [s.strip() for s in skills_match.group(1).split(',')]
+
         metadata = {
             "source": filename,
-            "tech_stack": []
+            "link": repo_link,
+            "tech_stack": skills
         }
-        
-        keywords = ["SolidWorks", "Python", "Shopify", "React", "AI", "nTopology"]
-        for kw in keywords:
-            if kw.lower() in content.lower():
-                metadata["tech_stack"].append(kw)
         
         ids = [f"{filename}_{i}" for i in range(len(chunks))]
         metadatas = [metadata for _ in range(len(chunks))]

@@ -1,0 +1,8 @@
+Project: Predictive Modeling for COVID-19 Patient Classification
+Link: https://github.com/nusRying/Predictive-Modeling-COVID19-Classification
+Tech: Python, AI, Scikit-Learn
+Skills: Python, AI, Scikit-Learn
+Outcome: --
+Source: GitHub Repository (Predictive-Modeling-COVID19-Classification)
+Year: 2024
+Status: Completed

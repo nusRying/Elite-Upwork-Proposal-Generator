@@ -3,6 +3,9 @@
 <head>
     <style>
         body { width: 300px; padding: 15px; font-family: 'Segoe UI', sans-serif; background: #0a0a0a; color: white; }
+        .control-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-size: 12px; color: #aaa; }
+        select { width: 100%; background: #1a1a1a; color: white; border: 1px solid #333; padding: 8px; border-radius: 4px; outline: none; }
         .btn { width: 100%; background: linear-gradient(135deg, #007bff, #0056b3); border: none; padding: 10px; color: white; border-radius: 5px; cursor: pointer; font-weight: bold; }
         .btn:hover { background: #0056b3; }
         .status { margin-top: 10px; font-size: 12px; color: #888; text-align: center; }
@@ -10,6 +13,13 @@
 </head>
 <body>
     <h3>Elite Proposal Tool</h3>
+    <div class="control-group">
+        <label>Job Type</label>
+        <select id="jobType">
+            <option value="project">Project-Based (Task focused)</option>
+            <option value="role">Role-Based (Ongoing hire)</option>
+        </select>
+    </div>
     <button id="generateBtn" class="btn">🚀 Generate Elite Proposal</button>
     <div id="status" class="status">Ready</div>
     <script src="popup.js"></script>

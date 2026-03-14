@@ -17,12 +17,16 @@ document.getElementById('generateBtn').addEventListener('click', async () => {
         }
 
         statusEl.innerText = "Sending to Elite Backend...";
+        const jobType = document.getElementById('jobType').value;
         
         try {
             const res = await fetch('http://localhost:8000/generate', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(response)
+                body: JSON.stringify({
+                    ...response,
+                    job_type: jobType
+                })
             });
             const result = await res.json();
             statusEl.innerText = "Proposal Generated! Check Dashboard.";

@@ -1,0 +1,8 @@
+Project: UAV Payload Stabilization and Flight Systems @ NASTP
+Link: --
+Tech: Embedded C, Python, C++, Linux, SPI/I2C/UART/1553
+Skills: Sensor Fusion, PID Control, Avionics Integration, Autonomous Systems
+Outcome: Designed intelligent flight control and payload stabilization systems for tactical UAVs with real-time telemetry.
+Source: Professional Experience (National Aerospace Science & Technology Park - NASTP)
+Year: 2025-2026
+Status: Completed

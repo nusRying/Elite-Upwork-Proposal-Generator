@@ -60,6 +60,19 @@ export default function App() {
     }
   ])
 
+  const [cvData, setCvData] = useState({
+    personal: { name: 'UMAIR EJAZ', title: 'Senior AI Automation Engineer', email: 'umair@example.com', phone: '+92 3XX XXXXXXX', location: 'Pakistan', website: 'github.com/umair' },
+    summary: 'Expert in LLM orchestration, RAG systems, and autonomous agent development. Delivering high-impact automation solutions for enterprise workflows.',
+    experience: [
+      { id: 1, company: 'Elite AI Solutions', role: 'Lead Automation Engineer', period: '2023 - Present', desc: 'Architected multi-agent systems using LangGraph.' },
+      { id: 2, company: 'TechVision Corp', role: 'Full Stack Developer', period: '2021 - 2023', desc: 'Developed real-time dashboards for hardware monitoring.' }
+    ],
+    education: [
+      { id: 1, school: 'NUST', degree: 'B.S. Electrical Engineering', period: '2019 - 2023' }
+    ],
+    skills: ['Python', 'TypeScript', 'React', 'LangChain', 'Ollama', 'PyTorch']
+  })
+
   const [isAdding, setIsAdding] = useState(false)
   const [editId, setEditId] = useState<number | null>(null)
   const [newProject, setNewProject] = useState({ title: '', category: 'AI', metrics: '', link: '', desc: '' })
@@ -184,9 +197,15 @@ export default function App() {
           </button>
           <button 
             onClick={() => setActiveTab('portfolio')}
-            className={`px-4 py-2 rounded-full transition-all ${activeTab === 'portfolio' ? 'bg-primary text-white' : 'text-gray-400 hover:text-white'}`}
+            className={`px-4 py-2 rounded-full transition-all ${activeTab === 'portfolio' ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'text-gray-400 hover:text-white'}`}
           >
             Portfolio
+          </button>
+          <button 
+            onClick={() => setActiveTab('cv')}
+            className={`px-4 py-2 rounded-full transition-all ${activeTab === 'cv' ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'text-gray-400 hover:text-white'}`}
+          >
+            CV Maker
           </button>
         </div>
       </header>
@@ -528,6 +547,200 @@ export default function App() {
                   </div>
                 </motion.div>
               ))}
+            </div>
+          </motion.div>
+        )}
+        {activeTab === 'cv' && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="grid grid-cols-1 lg:grid-cols-12 gap-8"
+          >
+            {/* Form Section */}
+            <div className="lg:col-span-5 space-y-6 max-h-[calc(100vh-250px)] overflow-y-auto pr-4 scrollbar-hide">
+              <div className="glass-card p-6 rounded-2xl">
+                <h3 className="text-xs font-bold text-primary uppercase tracking-widest mb-6 flex items-center gap-2">
+                  <Edit2 size={14} /> Personal Details
+                </h3>
+                <div className="space-y-4">
+                  <input 
+                    className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white focus:border-primary outline-none"
+                    placeholder="Full Name"
+                    value={cvData.personal.name}
+                    onChange={e => setCvData({...cvData, personal: {...cvData.personal, name: e.target.value}})}
+                  />
+                  <input 
+                    className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white focus:border-primary outline-none"
+                    placeholder="Professional Title"
+                    value={cvData.personal.title}
+                    onChange={e => setCvData({...cvData, personal: {...cvData.personal, title: e.target.value}})}
+                  />
+                  <div className="grid grid-cols-2 gap-4">
+                    <input 
+                      className="bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white focus:border-primary outline-none"
+                      placeholder="Email"
+                      value={cvData.personal.email}
+                      onChange={e => setCvData({...cvData, personal: {...cvData.personal, email: e.target.value}})}
+                    />
+                    <input 
+                      className="bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white focus:border-primary outline-none"
+                      placeholder="Phone"
+                      value={cvData.personal.phone}
+                      onChange={e => setCvData({...cvData, personal: {...cvData.personal, phone: e.target.value}})}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="glass-card p-6 rounded-2xl">
+                <h3 className="text-xs font-bold text-primary uppercase tracking-widest mb-6">Professional Summary</h3>
+                <textarea 
+                  className="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white focus:border-primary outline-none h-32 resize-none"
+                  placeholder="Elevator pitch..."
+                  value={cvData.summary}
+                  onChange={e => setCvData({...cvData, summary: e.target.value})}
+                />
+              </div>
+
+              <div className="glass-card p-6 rounded-2xl">
+                <div className="flex justify-between items-center mb-6">
+                  <h3 className="text-xs font-bold text-primary uppercase tracking-widest">Experience</h3>
+                  <button 
+                    onClick={() => setCvData({...cvData, experience: [...cvData.experience, { id: Date.now(), company: '', role: '', period: '', desc: '' }]})}
+                    className="text-primary hover:text-white transition-colors"
+                  >
+                    <Plus size={18} />
+                  </button>
+                </div>
+                <div className="space-y-6">
+                  {cvData.experience.map((exp, idx) => (
+                    <div key={exp.id} className="p-4 bg-white/5 rounded-xl border border-white/5 relative group">
+                      <button 
+                        onClick={() => setCvData({...cvData, experience: cvData.experience.filter(e => e.id !== exp.id)})}
+                        className="absolute top-2 right-2 text-gray-500 hover:text-red-400 opacity-0 group-hover:opacity-100 transition-opacity"
+                      >
+                        <X size={14} />
+                      </button>
+                      <input 
+                        className="w-full bg-transparent border-none p-0 text-sm font-bold text-white mb-2 outline-none"
+                        placeholder="Company Name"
+                        value={exp.company}
+                        onChange={e => {
+                          const newExp = [...cvData.experience]
+                          newExp[idx].company = e.target.value
+                          setCvData({...cvData, experience: newExp})
+                        }}
+                      />
+                      <div className="grid grid-cols-2 gap-4 mb-2">
+                        <input 
+                          className="bg-transparent border-none p-0 text-xs text-gray-400 outline-none"
+                          placeholder="Role"
+                          value={exp.role}
+                          onChange={e => {
+                            const newExp = [...cvData.experience]
+                            newExp[idx].role = e.target.value
+                            setCvData({...cvData, experience: newExp})
+                          }}
+                        />
+                        <input 
+                          className="bg-transparent border-none p-0 text-xs text-gray-400 text-right outline-none"
+                          placeholder="Period"
+                          value={exp.period}
+                          onChange={e => {
+                            const newExp = [...cvData.experience]
+                            newExp[idx].period = e.target.value
+                            setCvData({...cvData, experience: newExp})
+                          }}
+                        />
+                      </div>
+                      <textarea 
+                        className="w-full bg-transparent border-none p-0 text-xs text-gray-500 outline-none resize-none h-16"
+                        placeholder="Bullets..."
+                        value={exp.desc}
+                        onChange={e => {
+                          const newExp = [...cvData.experience]
+                          newExp[idx].desc = e.target.value
+                          setCvData({...cvData, experience: newExp})
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <button 
+                onClick={() => window.print()}
+                className="w-full py-4 bg-white text-black rounded-xl font-bold uppercase hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2 glow-primary"
+              >
+                <FileText size={18} /> Download / Print CV
+              </button>
+            </div>
+
+            {/* Preview Section */}
+            <div className="lg:col-span-7">
+              <div id="cv-preview" className="bg-white text-black p-12 rounded-lg shadow-2xl min-h-[842px] w-full max-w-[595px] mx-auto origin-top transition-transform hover:scale-[1.01]">
+                <header className="border-b-2 border-black pb-8 mb-8 flex justify-between items-end">
+                  <div>
+                    <h1 className="text-4xl font-black tracking-tighter uppercase mb-2">{cvData.personal.name}</h1>
+                    <p className="text-lg font-bold text-gray-600 uppercase tracking-widest">{cvData.personal.title}</p>
+                  </div>
+                  <div className="text-right text-[10px] font-bold uppercase tracking-tight text-gray-500">
+                    <p>{cvData.personal.email}</p>
+                    <p>{cvData.personal.phone}</p>
+                    <p>{cvData.personal.location}</p>
+                  </div>
+                </header>
+
+                <section className="mb-10">
+                  <h2 className="text-xs font-black uppercase tracking-[0.3em] mb-4 border-l-4 border-black pl-3">Summary</h2>
+                  <p className="text-sm leading-relaxed text-gray-800 italic">
+                    {cvData.summary}
+                  </p>
+                </section>
+
+                <section className="mb-10">
+                  <h2 className="text-xs font-black uppercase tracking-[0.3em] mb-6 border-l-4 border-black pl-3">Experience</h2>
+                  <div className="space-y-8">
+                    {cvData.experience.map(exp => (
+                      <div key={exp.id}>
+                        <div className="flex justify-between items-baseline mb-2">
+                          <h3 className="font-bold text-base uppercase tracking-tight">{exp.company}</h3>
+                          <span className="text-[10px] font-bold text-gray-500">{exp.period}</span>
+                        </div>
+                        <p className="text-xs font-bold text-gray-600 uppercase mb-2 tracking-wider">{exp.role}</p>
+                        <p className="text-xs text-gray-700 leading-relaxed font-medium">{exp.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                <div className="grid grid-cols-2 gap-12">
+                  <section>
+                    <h2 className="text-xs font-black uppercase tracking-[0.3em] mb-6 border-l-4 border-black pl-3">Education</h2>
+                    {cvData.education.map(edu => (
+                      <div key={edu.id}>
+                         <h3 className="font-bold text-xs uppercase mb-1">{edu.school}</h3>
+                         <p className="text-[10px] text-gray-600 mb-1">{edu.degree}</p>
+                         <p className="text-[8px] font-bold text-gray-400">{edu.period}</p>
+                      </div>
+                    ))}
+                  </section>
+                  <section>
+                    <h2 className="text-xs font-black uppercase tracking-[0.3em] mb-6 border-l-4 border-black pl-3">Expertise</h2>
+                    <div className="flex flex-wrap gap-2">
+                      {cvData.skills.map(skill => (
+                        <span key={skill} className="text-[10px] font-bold border border-black px-2 py-1 uppercase tracking-tighter">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </section>
+                </div>
+
+                <footer className="mt-20 pt-8 border-t border-gray-100 text-center">
+                  <p className="text-[8px] font-bold text-gray-300 uppercase tracking-[0.5em]">Generated by Elite Assistant System</p>
+                </footer>
+              </div>
             </div>
           </motion.div>
         )}

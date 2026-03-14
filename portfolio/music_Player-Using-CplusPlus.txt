@@ -1,0 +1,8 @@
+Project: Music Player README
+Link: https://github.com/nusRying/music_Player-Using-CplusPlus
+Tech: AI, C++
+Skills: AI, C++
+Outcome: --
+Source: GitHub Repository (music_Player-Using-CplusPlus)
+Year: 2024
+Status: Completed

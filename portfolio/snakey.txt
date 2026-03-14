@@ -1,0 +1,8 @@
+Project: Snakey
+Link: https://github.com/nusRying/snakey
+Tech: React, AI, Firebase, Node.js
+Skills: React, AI, Firebase, Node.js
+Outcome: --
+Source: GitHub Repository (snakey)
+Year: 2024
+Status: Completed

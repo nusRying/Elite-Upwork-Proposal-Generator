@@ -1,0 +1,8 @@
+Project: Constant-Voltage-Power-Supply-Dual-Channel-
+Link: https://github.com/nusRying/Constant-Voltage-Power-Supply-Dual-Channel-
+Tech: General Engineering
+Skills: 
+Outcome: --
+Source: GitHub Repository (Constant-Voltage-Power-Supply-Dual-Channel-)
+Year: 2024
+Status: Completed

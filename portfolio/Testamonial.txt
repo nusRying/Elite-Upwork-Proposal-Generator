@@ -1,0 +1,8 @@
+Project: Testamonial Website
+Link: https://github.com/nusRying/Testamonial
+Tech: Python, AI
+Skills: Python, AI
+Outcome: --
+Source: GitHub Repository (Testamonial)
+Year: 2024
+Status: Completed

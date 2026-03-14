@@ -1,0 +1,8 @@
+Project: Hand Gesture Recognition
+Link: https://github.com/nusRying/Hand_Gesture_Recognition
+Tech: Python, AI
+Skills: Python, AI
+Outcome: --
+Source: GitHub Repository (Hand_Gesture_Recognition)
+Year: 2024
+Status: Completed

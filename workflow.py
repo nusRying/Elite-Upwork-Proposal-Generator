@@ -17,7 +17,7 @@ class EliteProposalWorkflow:
         self.knowledge_vault = KnowledgeVault()
         self.feedback_loop = FeedbackLoop()
 
-    def run(self, job_description, client_history="", screening_questions=None):
+    def run(self, job_description, job_type="project", client_history="", screening_questions=None):
         print("--- Starting Elite Proposal Workflow ---")
         
         # 1. Intelligence Phase
@@ -27,7 +27,7 @@ class EliteProposalWorkflow:
         
         # 2. Strategy Phase
         print("[2/6] Developing Strategy...")
-        strategy = self.strategist.create_strategy(job_analysis, client_analysis)
+        strategy = self.strategist.create_strategy(job_analysis, client_analysis, job_type)
         
         # 3. Knowledge Retrieval
         print("[3/6] Retrieving Relevant Portfolio & Knowledge...")
@@ -61,7 +61,8 @@ class EliteProposalWorkflow:
             "relevant_projects": relevant_projects,
             "relevant_knowledge": relevant_knowledge,
             "winning_examples": winning_examples,
-            "job_description": job_description
+            "job_description": job_description,
+            "job_type": job_type
         }
         
         proposal = self.writer.write_draft(state)

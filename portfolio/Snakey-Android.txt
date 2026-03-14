@@ -1,0 +1,8 @@
+Project: Snakey Android
+Link: https://github.com/nusRying/Snakey-Android
+Tech: TypeScript, Node.js, Docker
+Skills: TypeScript, Node.js, Docker
+Outcome: --
+Source: GitHub Repository (Snakey-Android)
+Year: 2024
+Status: Completed

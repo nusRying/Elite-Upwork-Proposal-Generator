@@ -1,0 +1,8 @@
+Project: ORFEO AI - Premium AI Agency Landing Page
+Link: https://github.com/nusRying/orfeo-ai
+Tech: React, AI, Next.js, Node.js, Tailwind CSS
+Skills: React, AI, Next.js, Node.js, Tailwind CSS
+Outcome: --
+Source: GitHub Repository (orfeo-ai)
+Year: 2024
+Status: Completed

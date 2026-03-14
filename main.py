@@ -24,6 +24,7 @@ feedback_loop = FeedbackLoop()
 
 class ProposalRequest(BaseModel):
     job_description: str
+    job_type: str = "project"  # Default to project
     client_history: Optional[str] = ""
     screening_questions: Optional[List[str]] = []
 
@@ -37,6 +38,7 @@ async def generate_proposal(request: ProposalRequest):
     try:
         result = workflow.run(
             request.job_description,
+            request.job_type,
             request.client_history,
             request.screening_questions
         )

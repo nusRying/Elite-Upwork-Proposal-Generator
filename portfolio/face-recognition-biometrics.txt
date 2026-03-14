@@ -1,0 +1,8 @@
+Project: ≡ƒÄ¡ Face Recognition & Biometrics
+Link: https://github.com/nusRying/face-recognition-biometrics
+Tech: Python, AI, C++, OpenCV
+Skills: Python, AI, C++, OpenCV
+Outcome: --
+Source: GitHub Repository (face-recognition-biometrics)
+Year: 2024
+Status: Completed

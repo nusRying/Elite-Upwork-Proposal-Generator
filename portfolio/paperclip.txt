@@ -1,0 +1,8 @@
+Project: What is Paperclip?
+Link: https://github.com/nusRying/paperclip
+Tech: React, AI, PostgreSQL, Node.js
+Skills: React, AI, PostgreSQL, Node.js
+Outcome: -- <p align="center"> <img src="doc/assets/header.png" alt="Paperclip Çö runs your business" width="720" />
+Source: GitHub Repository (paperclip)
+Year: 2024
+Status: Completed

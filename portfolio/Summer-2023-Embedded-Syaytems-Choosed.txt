@@ -1,0 +1,8 @@
+Project: Summer-2023-Embedded-Syaytems-Choosed
+Link: https://github.com/nusRying/Summer-2023-Embedded-Syaytems-Choosed
+Tech: General Engineering
+Skills: 
+Outcome: --
+Source: GitHub Repository (Summer-2023-Embedded-Syaytems-Choosed)
+Year: 2024
+Status: Completed

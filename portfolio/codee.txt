@@ -1,0 +1,8 @@
+Project: codee
+Link: https://github.com/nusRying/codee
+Tech: General Engineering
+Skills: 
+Outcome: A GitHub repository for codee.
+Source: GitHub Repository (codee)
+Year: 2024
+Status: Completed

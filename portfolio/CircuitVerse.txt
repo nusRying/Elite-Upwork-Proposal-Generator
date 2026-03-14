@@ -1,0 +1,8 @@
+Project: Getting Started with CircuitVerse code base ≡ƒô╣
+Link: https://github.com/nusRying/CircuitVerse
+Tech: CircuitVerse
+Skills: CircuitVerse
+Outcome: -- <img src="/app/assets/images/cvlogo.svg" alt="The CircuitVerse logo" width="736"/> </br></br> ![Financial Contributors on Open Collective](https://opencollective.com/CircuitVerse)
+Source: GitHub Repository (CircuitVerse)
+Year: 2024
+Status: Completed

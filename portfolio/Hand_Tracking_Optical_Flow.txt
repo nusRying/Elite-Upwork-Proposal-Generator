@@ -1,0 +1,8 @@
+Project: Hand Tracking using Optical Flow
+Link: https://github.com/nusRying/Hand_Tracking_Optical_Flow
+Tech: Python
+Skills: Python
+Outcome: --
+Source: GitHub Repository (Hand_Tracking_Optical_Flow)
+Year: 2024
+Status: Completed

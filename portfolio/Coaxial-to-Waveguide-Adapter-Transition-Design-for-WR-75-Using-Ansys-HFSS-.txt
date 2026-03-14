@@ -1,0 +1,8 @@
+Project: Coaxial-to-Waveguide-Adapter-Transition-Design-for-WR-75-Using-Ansys-HFSS-
+Link: https://github.com/nusRying/Coaxial-to-Waveguide-Adapter-Transition-Design-for-WR-75-Using-Ansys-HFSS-
+Tech: General Engineering
+Skills: 
+Outcome: --
+Source: GitHub Repository (Coaxial-to-Waveguide-Adapter-Transition-Design-for-WR-75-Using-Ansys-HFSS-)
+Year: 2024
+Status: Completed

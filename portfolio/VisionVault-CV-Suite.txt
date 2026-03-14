@@ -1,0 +1,8 @@
+Project: Antigravity CV Project Suite
+Link: https://github.com/nusRying/VisionVault-CV-Suite
+Tech: Python, AI
+Skills: Python, AI
+Outcome: --
+Source: GitHub Repository (VisionVault-CV-Suite)
+Year: 2024
+Status: Completed

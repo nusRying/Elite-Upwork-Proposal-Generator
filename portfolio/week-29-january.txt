@@ -1,0 +1,8 @@
+Project: Evolutionary Derma-Classifier: Cross-Domain Skin Lesion Analysis
+Link: https://github.com/nusRying/week-29-january
+Tech: Python, AI, OpenCV, Scikit-Learn, Docker
+Skills: Python, AI, OpenCV, Scikit-Learn, Docker
+Outcome: --
+Source: GitHub Repository (week-29-january)
+Year: 2024
+Status: Completed

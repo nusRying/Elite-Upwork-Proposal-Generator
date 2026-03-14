@@ -1,0 +1,8 @@
+Project: Deep Learning Based NOMA Receiver (CNN-BiLSTM)
+Link: https://github.com/nusRying/CNN-LSTM-NOMA-Receiver
+Tech: AI, MATLAB
+Skills: AI, MATLAB
+Outcome: --
+Source: GitHub Repository (CNN-LSTM-NOMA-Receiver)
+Year: 2024
+Status: Completed

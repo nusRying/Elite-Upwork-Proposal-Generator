@@ -1,0 +1,8 @@
+Project: Arithmatic-Logic-Unit
+Link: https://github.com/nusRying/Arithmatic-Logic-Unit
+Tech: General Engineering
+Skills: 
+Outcome: --
+Source: GitHub Repository (Arithmatic-Logic-Unit)
+Year: 2024
+Status: Completed

@@ -1,0 +1,8 @@
+Project: RL-Based Active Vibration Control for UAV Gimbals
+Link: https://github.com/nusRying/RL-Based-Active-Vibration-Control-for-UAV-Gimbals
+Tech: Python, AI
+Skills: Python, AI
+Outcome: --
+Source: GitHub Repository (RL-Based-Active-Vibration-Control-for-UAV-Gimbals)
+Year: 2024
+Status: Completed

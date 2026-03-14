@@ -1,0 +1,8 @@
+Project: DVBS2X ΓÇö DVBΓÇæS2/X TXΓåöRX Loopback Suite
+Link: https://github.com/nusRying/SATCOM-DVBS2X
+Tech: Python, AI
+Skills: Python, AI
+Outcome: --
+Source: GitHub Repository (SATCOM-DVBS2X)
+Year: 2024
+Status: Completed

@@ -1,0 +1,8 @@
+Project: ≡ƒîì Multilingual Text Intelligence System
+Link: https://github.com/nusRying/multilingual-text-intelligence
+Tech: Python, AI, FastAPI, Docker
+Skills: Python, AI, FastAPI, Docker
+Outcome: --
+Source: GitHub Repository (multilingual-text-intelligence)
+Year: 2024
+Status: Completed

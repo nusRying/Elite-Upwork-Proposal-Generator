@@ -1,0 +1,8 @@
+Project: Object_Detection_101
+Link: https://github.com/nusRying/Object_Detection_101
+Tech: General Engineering
+Skills: 
+Outcome: --
+Source: GitHub Repository (Object_Detection_101)
+Year: 2024
+Status: Completed

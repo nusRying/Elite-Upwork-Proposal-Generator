@@ -1,0 +1,8 @@
+Project: Optic Disc Detection (U-Net)
+Link: https://github.com/nusRying/Optic_Disc_Detection
+Tech: Python, AI
+Skills: Python, AI
+Outcome: --
+Source: GitHub Repository (Optic_Disc_Detection)
+Year: 2024
+Status: Completed

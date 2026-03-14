@@ -1,0 +1,8 @@
+Project: Camera Estimation using Feature Matching
+Link: https://github.com/nusRying/Camera_Estimation
+Tech: Python, AI
+Skills: Python, AI
+Outcome: --
+Source: GitHub Repository (Camera_Estimation)
+Year: 2024
+Status: Completed

@@ -1,0 +1,8 @@
+Project: sample_Repo3
+Link: https://github.com/nusRying/sample_Repo3
+Tech: General Engineering
+Skills: 
+Outcome: --
+Source: GitHub Repository (sample_Repo3)
+Year: 2024
+Status: Completed

@@ -1,0 +1,8 @@
+Project: Project Asani
+Link: https://github.com/nusRying/smart_Home
+Tech: AI, Arduino
+Skills: AI, Arduino
+Outcome: --
+Source: GitHub Repository (smart_Home)
+Year: 2024
+Status: Completed

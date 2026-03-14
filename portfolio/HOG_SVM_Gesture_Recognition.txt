@@ -1,0 +1,8 @@
+Project: HOG + SVM Gesture Recognition
+Link: https://github.com/nusRying/HOG_SVM_Gesture_Recognition
+Tech: Python, AI
+Skills: Python, AI
+Outcome: --
+Source: GitHub Repository (HOG_SVM_Gesture_Recognition)
+Year: 2024
+Status: Completed

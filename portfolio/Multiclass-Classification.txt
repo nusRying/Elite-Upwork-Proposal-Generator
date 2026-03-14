@@ -1,0 +1,8 @@
+Project: Multiclass Classification
+Link: https://github.com/nusRying/Multiclass-Classification
+Tech: Python, AI
+Skills: Python, AI
+Outcome: --
+Source: GitHub Repository (Multiclass-Classification)
+Year: 2024
+Status: Completed

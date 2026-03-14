@@ -1,0 +1,8 @@
+Project: Project Architecture: 7 Standalone Experimental Phases
+Link: https://github.com/nusRying/Deep_Features_PhD_Research
+Tech: Python, AI
+Skills: Python, AI
+Outcome: --
+Source: GitHub Repository (Deep_Features_PhD_Research)
+Year: 2024
+Status: Completed

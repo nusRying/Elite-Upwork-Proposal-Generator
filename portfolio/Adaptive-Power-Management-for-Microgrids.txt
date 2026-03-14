@@ -1,0 +1,8 @@
+Project: Adaptive Power Management for Microgrids
+Link: https://github.com/nusRying/Adaptive-Power-Management-for-Microgrids
+Tech: Python, AI
+Skills: Python, AI
+Outcome: --
+Source: GitHub Repository (Adaptive-Power-Management-for-Microgrids)
+Year: 2024
+Status: Completed
