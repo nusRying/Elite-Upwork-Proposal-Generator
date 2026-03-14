@@ -37,14 +37,14 @@ class EliteProposalWorkflow:
         )
         
         # New V2: Knowledge Vault Retrieval
-        knowledge_items = self.knowledge_vault.get_all_knowledge()
-        # Filter knowledge items that match tech stack (simple keyword match for now)
         relevant_knowledge = []
-        for item in knowledge_items:
-            for tech in job_analysis.get('tech_stack', []):
-                if tech.lower() in item['snippet'].lower():
-                    relevant_knowledge.append(item)
-                    break
+        tech_stack = job_analysis.get('tech_stack', []) # Define tech_stack here
+        
+        # Improved search for tech stack match across full content
+        for tech in tech_stack:
+            matches = self.knowledge_vault.search_knowledge(tech, limit=2)
+            for match in matches:
+                relevant_knowledge.append(f"From {match['filename']}: {match['content'][:1000]}")
         
         # New V2: Feedback Loop (Few-shot learning)
         winning_examples = self.feedback_loop.get_winning_examples(limit=2)

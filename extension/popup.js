@@ -5,8 +5,14 @@ document.getElementById('generateBtn').addEventListener('click', async () => {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
     chrome.tabs.sendMessage(tab.id, { action: "scrape" }, async (response) => {
+        if (chrome.runtime.lastError) {
+            statusEl.innerText = "Error: Please open an Upwork Job page.";
+            console.error("Messaging Error:", chrome.runtime.lastError.message);
+            return;
+        }
+
         if (!response) {
-            statusEl.innerText = "Error: Use on Upwork job page.";
+            statusEl.innerText = "Error: Use on Upwork job page (or refresh).";
             return;
         }
 

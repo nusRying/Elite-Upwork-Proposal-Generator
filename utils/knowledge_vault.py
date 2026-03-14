@@ -1,8 +1,7 @@
 import os
 from typing import List
-from pypdf import PdfReader
+import fitz  # pymupdf
 from docx import Document
-from langchain_text_splitters import RecursiveCharacterTextSplitter
 import sqlite3
 import json
 
@@ -33,9 +32,10 @@ class KnowledgeVault:
         
         content = ""
         if ext == ".pdf":
-            reader = PdfReader(file_path)
-            for page in reader.pages:
-                content += page.extract_text() + "\n"
+            doc = fitz.open(file_path)
+            for page in doc:
+                content += page.get_text() + "\n"
+            doc.close()
         elif ext == ".docx":
             doc = Document(file_path)
             for para in doc.paragraphs:
@@ -60,10 +60,23 @@ class KnowledgeVault:
     def get_all_knowledge(self):
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        cursor.execute("SELECT id, filename, content FROM knowledge_items")
-        items = [{"id": r[0], "filename": r[1], "snippet": r[2][:200]} for r in cursor.fetchall()]
+        cursor.execute("SELECT id, filename, content, metadata FROM knowledge_items")
+        items = [{"id": r[0], "filename": r[1], "snippet": r[2][:500], "content": r[2]} for r in cursor.fetchall()]
         conn.close()
         return items
+
+    def search_knowledge(self, query: str, limit: int = 5):
+        """Simple keyword search across full content."""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        # Search in content using LIKE
+        cursor.execute(
+            "SELECT id, filename, content FROM knowledge_items WHERE content LIKE ?",
+            (f"%{query}%",)
+        )
+        results = [{"id": r[0], "filename": r[1], "content": r[2]} for r in cursor.fetchall()]
+        conn.close()
+        return results[:limit]
 
     def delete_knowledge(self, item_id: int):
         conn = sqlite3.connect(self.db_path)

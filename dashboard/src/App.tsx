@@ -102,6 +102,46 @@ export default function App() {
     setTimeout(() => setCopied(false), 2000)
   }
 
+  const [knowledgeItems, setKnowledgeItems] = useState<any[]>([])
+  
+  const fetchKnowledge = async () => {
+    try {
+      const response = await fetch('/api/knowledge')
+      const data = await response.json()
+      setKnowledgeItems(data.items || [])
+    } catch (error) {
+      console.error('Failed to fetch knowledge', error)
+    }
+  }
+
+  useEffect(() => {
+    if (activeTab === 'knowledge') {
+      fetchKnowledge()
+    }
+  }, [activeTab])
+
+  const handleUpdateStatus = async (proposalId: number, status: string) => {
+    try {
+      await fetch('/api/proposals/status', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ proposal_id: proposalId, status })
+      })
+      setProposal({ ...proposal, status_updated: true })
+    } catch (error) {
+      console.error('Failed to update status', error)
+    }
+  }
+
+  const handleDeleteKnowledge = async (id: number) => {
+    try {
+      await fetch(`/api/knowledge/${id}`, { method: 'DELETE' })
+      fetchKnowledge()
+    } catch (error) {
+      console.error('Failed to delete knowledge', error)
+    }
+  }
+
   const handleGenerate = async () => {
     setIsGenerating(true)
     setCopied(false)
@@ -135,6 +175,12 @@ export default function App() {
             className={`px-4 py-2 rounded-full transition-all ${activeTab === 'generator' ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'text-gray-400 hover:text-white'}`}
           >
             Generator
+          </button>
+          <button 
+            onClick={() => setActiveTab('knowledge')}
+            className={`px-4 py-2 rounded-full transition-all ${activeTab === 'knowledge' ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'text-gray-400 hover:text-white'}`}
+          >
+            Knowledge
           </button>
           <button 
             onClick={() => setActiveTab('portfolio')}
@@ -233,6 +279,28 @@ export default function App() {
                           className="progress-fill"
                         />
                       </div>
+
+                      {!proposal.status_updated && (
+                        <div className="flex gap-3 pt-4">
+                          <button 
+                            onClick={() => handleUpdateStatus(proposal.proposal_id, 'won')}
+                            className="flex-1 py-3 rounded-xl border border-green-500/30 bg-green-500/5 text-green-400 text-xs font-bold uppercase hover:bg-green-500/10 transition-all flex items-center justify-center gap-2"
+                          >
+                            <Sparkles size={14} /> Won Job
+                          </button>
+                          <button 
+                            onClick={() => handleUpdateStatus(proposal.proposal_id, 'lost')}
+                            className="flex-1 py-3 rounded-xl border border-white/10 bg-white/5 text-gray-400 text-xs font-bold uppercase hover:bg-white/10 transition-all"
+                          >
+                            Lost / No Reply
+                          </button>
+                        </div>
+                      )}
+                      {proposal.status_updated && (
+                        <div className="pt-4 text-center">
+                          <span className="text-[10px] text-primary font-bold uppercase tracking-widest">Feedback Received - Improving Synthesizer</span>
+                        </div>
+                      )}
                     </div>
                   </motion.div>
                 ) : (
@@ -249,6 +317,77 @@ export default function App() {
               </AnimatePresence>
             </section>
           </div>
+        )}
+
+        {activeTab === 'knowledge' && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="space-y-8"
+          >
+            <div className="flex justify-between items-end">
+              <div>
+                <h2 className="text-3xl font-bold uppercase tracking-tight">Knowledge Vault</h2>
+                <p className="text-gray-500 mt-1">Enhance your proposals with corporate context and past successes.</p>
+              </div>
+              <button 
+                className="p-2 bg-secondary/10 text-secondary rounded-xl hover:bg-secondary/20 transition-all flex items-center gap-2 px-4 text-xs font-bold uppercase cursor-pointer"
+                onClick={() => {
+                  const input = document.createElement('input')
+                  input.type = 'file'
+                  input.onchange = async (e: any) => {
+                    const file = e.target.files[0]
+                    const formData = new FormData()
+                    formData.append('file', file)
+                    await fetch('/api/knowledge/upload', {
+                      method: 'POST',
+                      body: formData
+                    })
+                    fetchKnowledge()
+                  }
+                  input.click()
+                }}
+              >
+                <Plus size={16} /> Upload Context
+              </button>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {knowledgeItems.map((item, idx) => (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: idx * 0.05 }}
+                  className="glass-card p-6 rounded-2xl flex flex-col group relative"
+                >
+                  <div className="flex justify-between items-start mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center">
+                      <Shield size={20} className="text-secondary" />
+                    </div>
+                    <button 
+                      onClick={() => handleDeleteKnowledge(item.id)}
+                      className="text-gray-600 hover:text-red-400 p-2"
+                    >
+                      <Trash2 size={16} />
+                    </button>
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">{item.filename}</h3>
+                  <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-4">Type: {item.type || 'Context'}</p>
+                  <div className="mt-auto pt-4 border-t border-white/5">
+                    <span className="text-xs text-secondary font-mono">Active in Generation</span>
+                  </div>
+                </motion.div>
+              ))}
+              {knowledgeItems.length === 0 && (
+                <div className="col-span-full py-20 glass-card rounded-3xl border-dashed flex flex-col items-center justify-center opacity-30">
+                  <Shield size={48} className="mb-4" />
+                  <p className="text-sm uppercase tracking-widest font-bold">Vault Empty</p>
+                  <p className="text-xs text-gray-500 mt-2">Upload PDFs or Text files to give agents context.</p>
+                </div>
+              )}
+            </div>
+          </motion.div>
         )}
 
         {activeTab === 'portfolio' && (
